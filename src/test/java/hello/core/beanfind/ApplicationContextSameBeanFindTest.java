@@ -44,7 +44,7 @@ public class ApplicationContextSameBeanFindTest {
     }
 
     @Configuration
-    static class SameBeanConfig {
+    static class SameBeanConfig { // ApplicationContextSameBeanFindTest 클래스 안에서만 이 클래스를 사용할 것이기 때문에 static을 붙힌다. (scope 지정)
 
         @Bean
         public MemberRepository memberRepository1() {

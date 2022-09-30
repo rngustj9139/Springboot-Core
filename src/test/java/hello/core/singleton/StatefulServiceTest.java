@@ -21,17 +21,19 @@ class StatefulServiceTest {
         int userbPrice = statefulService2.order("userB", 20000);
 
         //ThreadA: A사용자 주문 금액 조회
-//        int price = statefulService1.getPrice();
-        System.out.println("price = " + useraPrice);
+        int price = statefulService1.getPrice();
+        System.out.println("price = " + price); // 10000원이 아니라 20000원이 나오게 된다. (멀티 스레드 문제 발생)
 
         Assertions.assertThat(useraPrice).isNotEqualTo(userbPrice);
     }
 
     static class TestConfig {
+
         @Bean
         public StatefulService statefulService() {
             return new StatefulService();
         }
+
     }
 
 }

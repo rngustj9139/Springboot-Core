@@ -1,3 +1,4 @@
+<!-- 자바 코드가 안들어간 파일은 전부 resources 폴더 아래에 두면 된다. resources 폴더를 오른쪽 클릭하고 new 클릭 후 xml cofiguration 클릭, spring config 클릭하기 -->
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"

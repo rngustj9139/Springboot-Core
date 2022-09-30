@@ -14,8 +14,8 @@ public class BeanDefinitionTest {
     @DisplayName("빈 설정 메타 정보 출력")
     void findApplicationBean() {
         String[] beanDefinitionNames = ac.getBeanDefinitionNames();
-        for (String beanDefinitionName : beanDefinitionNames) {
 
+        for (String beanDefinitionName : beanDefinitionNames) {
             BeanDefinition beanDefinition = ac.getBeanDefinition(beanDefinitionName);
             if(beanDefinition.getRole() == BeanDefinition.ROLE_APPLICATION) {
                 System.out.println("beanDefinitionName = " + beanDefinitionName + " beanDefinition = " + beanDefinition);
