@@ -28,6 +28,7 @@ public class PrototypeTest {
 
     @Scope("prototype")
     static class PrototypeBean {
+
         @PostConstruct
         public void init() {
             System.out.println("PrototypeBean.init");
@@ -37,6 +38,7 @@ public class PrototypeTest {
         public void destory() {
             System.out.println("PrototypeBean.destory");
         }
+
     }
 
 }

@@ -44,6 +44,8 @@ public class SingletonWithPrototypeTest1 {
 
     @Scope("singleton")
     static class ClientBean {
+
+        // Provider를 사용하기위해서는 다음과 같이 build.gradle에 의존성을 추가해주어야한다. implementation 'javax.inject:javax.inject:1'
         @Autowired
         private Provider<PrototypeBean> prototypeBeanProvider;
 
@@ -53,10 +55,12 @@ public class SingletonWithPrototypeTest1 {
             int count = prototypeBean.getCount();
             return count;
         }
+
     }
 
     @Scope("prototype")
     static class PrototypeBean {
+
         private int count = 0;
 
         public void addCount() {
